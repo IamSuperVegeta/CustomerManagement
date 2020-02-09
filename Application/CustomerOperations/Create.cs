@@ -36,8 +36,8 @@ namespace Application.CustomerOperations
                 {
                     Id = request.Id,
                     Username = request.Username,
-                    FirstName = request.FirstName,
-                    LastName = request.LastName,
+                    Firstname = request.FirstName,
+                    Lastname = request.LastName,
                     DateOfBirth = request.DateOfBirth,
                     PhoneNumber = request.PhoneNumber
                 };

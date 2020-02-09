@@ -37,9 +37,9 @@ namespace Application.CustomerOperations
 
                 var customer = _context.Customers.Find(request.Id);
 
-                customer.FirstName = request.FirstName ?? customer.FirstName;
+                customer.Firstname = request.FirstName ?? customer.Firstname;
                 customer.Username = request.Username ?? customer.Username;
-                customer.LastName = request.LastName ?? customer.LastName;
+                customer.Lastname = request.LastName ?? customer.Lastname;
                 customer.PhoneNumber = request.PhoneNumber ?? customer.PhoneNumber;
                 customer.DateOfBirth = request.DateOfBirth ?? customer.DateOfBirth;
 

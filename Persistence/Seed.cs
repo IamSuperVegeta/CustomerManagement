@@ -15,10 +15,10 @@ namespace Persistence
 
                 var customer = new List<Customer>
             {
-                new Customer{ Username="JohnSmith",FirstName = "John", LastName="Smith", DateOfBirth= new DateTime(1997,1,1)},
-                  new Customer{Username="MikeDaryl", FirstName = "Mike", LastName="Daryl", DateOfBirth= new DateTime(1998,12,1)},
-                  new Customer{Username="AlbertRobberts", FirstName = "Albert", LastName="Robberts", DateOfBirth= new DateTime(1997,11,3)},
-                  new Customer{Username="FrankiePeters", FirstName = "Frankie", LastName="Peters", DateOfBirth= new DateTime(1997,10,5)},
+                new Customer{ Username="JohnSmith",Firstname = "John", Lastname="Smith", PhoneNumber="123", DateOfBirth= DateTime.Now.AddMonths(-2)},
+                  new Customer{Username="MikeDaryl", Firstname = "Mike", Lastname="Daryl",PhoneNumber="123", DateOfBirth= DateTime.Now.AddMonths(-2)},
+                  new Customer{Username="AlbertRobberts", Firstname = "Albert", Lastname="Robberts", PhoneNumber="123",DateOfBirth= DateTime.Now.AddMonths(-2)},
+                  new Customer{Username="FrankiePeters", Firstname = "Frankie", Lastname="Peters", PhoneNumber="123",DateOfBirth= DateTime.Now.AddMonths(-2)},
             };
 
                 context.Customers.AddRange(customer);
