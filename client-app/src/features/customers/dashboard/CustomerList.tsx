@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import { Card, Image, Icon, Segment } from "semantic-ui-react";
 import CustomerStore from "../../../app/stores/customerStore";
 import {observer} from "mobx-react-lite";
+import Moment from 'moment';
+
 
 
 export const CustomerList: React.FC = () => {
   const customerStore = useContext(CustomerStore);
-  const { customerByDate , customers} = customerStore;
+  const { customerByDate , openEditForm} = customerStore;
   return (
     <Segment clearing>
       {customerByDate.map(customer => (
@@ -17,18 +19,21 @@ export const CustomerList: React.FC = () => {
             ui={false}
           />
           <Card.Content>
-            <Card.Header>{customer.firstname}</Card.Header>
+            <Card.Header>{customer.firstname} {customer.lastname}</Card.Header>
             <Card.Meta>
-              <span className="date">DOB in {customer.dateOfBirth}</span>
+              <span className="date">Username: {customer.username} </span>
+            </Card.Meta>
+            <Card.Meta>
+              <span className="date">DOB: {Moment(customer.dateOfBirth).format('MMMM Do YYYY')} </span>
             </Card.Meta>
             <Card.Description>
-            {customer.firstname}  {customer.lastname} is a musician living in Nashville. 
+            {customer.firstname} is a musician living in Nashville. 
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <a>
-              <Icon name="user" />
-              22 Friends
+            <a onClick={()=>openEditForm(customer.id)}>
+              <Icon name="edit" />
+              Edit
             </a>
           </Card.Content>
         </Card>

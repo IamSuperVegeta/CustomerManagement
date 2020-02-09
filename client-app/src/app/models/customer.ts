@@ -3,7 +3,6 @@ export interface ICustomer {
     username: string;
     firstname: string;
     lastname: string;
-    surname: string;
     phoneNumber: string;
     dateOfBirth: string;
 }
