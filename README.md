@@ -27,7 +27,8 @@
 ## Dotnet Core Packages
 | Package                                               | Link                                                                       |
 | -------------                                         | -------------                                                              |
-| Microsoft.EntityFrameworkCore.Design                  | https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/3.1.2  |    | MediatR.Extensions.Microsoft.DependencyInjection      | https://github.com/jbogard/MediatR  |                         
+| Microsoft.EntityFrameworkCore.Design                  | https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/3.1.2  | 
+| MediatR.Extensions.Microsoft.DependencyInjection       | https://github.com/jbogard/MediatR                                        |                      
 
 ## Notes
 A sqlite DB is generated automatically prefilled with data (customer.db).
