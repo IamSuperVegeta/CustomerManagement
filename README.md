@@ -2,8 +2,10 @@
 
 
 ## To run project:
-1. Run the API project ( `cd API` => `dotnet watch run`)
-2. Run the React SPA project (`cd client-app` => `npm start`)
+1. Make sure you .Net Core SDK 3.1 installed
+2. run the following command 'dotnet tool install --global dotnet-ef'
+3. Run the API project ( `cd API` => `dotnet watch run`)
+4. Run the React SPA project (`cd client-app` => `npm start`)
 
 ## Project Details
 - API is built in dotnet core
