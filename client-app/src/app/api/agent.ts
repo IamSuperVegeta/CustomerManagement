@@ -11,8 +11,8 @@ const sleep = (ms: number) => (response: AxiosResponse) =>
 
     const requests = {
         get: (url: string) => axios.get(url).then(sleep(1000)).then(responseBody).catch(e=>console.log("Get "+e)),
-        post: (url: string, body: object) => axios.post(url, body).then(sleep(1000)).then(responseBody),
-        put: (url: string, body: object) => axios.put(url, body).then(sleep(1000)).then(responseBody),
+        post: (url: string, body: object) => axios.post(url, body).then(sleep(1000)).then(responseBody).catch(e=>console.log("post "+e)),
+        put: (url: string, body: object) => axios.put(url, body).then(sleep(1000)).then(responseBody).catch(e=>console.log("put "+e)),
         del: (url: string) => axios.delete(url).then(sleep(1000)).then(responseBody)
     }
     

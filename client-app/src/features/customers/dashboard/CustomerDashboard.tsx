@@ -7,7 +7,8 @@ import { CustomerForm } from "../../form/CustomerForm";
 
 export const CustomerDashboard: React.FC = () => {
   const customerStore = useContext(CustomerStore);
-  const { editMode } = customerStore;
+  const { editMode, selectedCustomer,loadingIndicator } = customerStore;
+
   return (
     <Grid columns={2} divided>
       <Grid.Row>
@@ -16,7 +17,11 @@ export const CustomerDashboard: React.FC = () => {
         </Grid.Column>
         {editMode && (
           <Grid.Column>
-            <CustomerForm />
+            <CustomerForm
+              key={(selectedCustomer && selectedCustomer.id) || 0}
+              customer = {selectedCustomer!}
+              loadingIndicator = {loadingIndicator}
+            />
           </Grid.Column>
         )}
       </Grid.Row>
